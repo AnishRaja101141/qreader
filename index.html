@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced QR Code Reader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Advanced QR Code Reader</h1>
+
+      <!-- QR Code reader input section -->
+      <div class="qr-input">
+        <button id="start-camera">Start Camera</button>
+        <input type="file" id="upload-image" accept="image/*" />
+      </div>
+
+      <!-- Video element for webcam -->
+      <div class="camera-container">
+        <video
+          id="qr-video"
+          width="100%"
+          height="auto"
+          style="border: 1px solid #ccc"
+        ></video>
+        <canvas id="qr-canvas" style="display: none"></canvas>
+      </div>
+
+      <!-- Output result section -->
+      <div id="qr-result" class="result">
+        <p>QR Code Content:</p>
+        <p id="output-text">No QR Code scanned yet.</p>
+
+        <!-- Buttons to open and copy the link -->
+        <div id="qr-buttons" style="display: none">
+          <button id="open-link" class="action-button">Open the Link</button>
+          <button id="copy-link" class="action-button">Copy the Link</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
